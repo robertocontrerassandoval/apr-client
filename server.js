@@ -9,9 +9,13 @@ app.use(express.json());
 
 const authRoutes = require('./routes/authRoutes');
 const clientRoutes = require('./routes/clientRoutes'); // ✅ nuevo
+const consumptionRoutes = require('./routes/consumptionRoutes');
+
 
 app.use('/api/auth', authRoutes);
 app.use('/api/clients', clientRoutes); // ✅ nuevo
+app.use('/api/consumption', consumptionRoutes);
+
 
 // Ruta de prueba
 app.get('/', (req, res) => {
